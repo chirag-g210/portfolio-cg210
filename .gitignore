@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment / local config
+.env
+.env.*
+!.env.example
+*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Antigravity / AI workspace files
+.agents/
+.agent/
+.gemini/
+
+# IDE
+.vscode/
+
+# Local files
+*.swp
+*.swo
