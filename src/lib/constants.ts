@@ -1,7 +1,7 @@
 export const PERSONAL_INFO = {
   name: "Chirag Gupta",
   title: "Full Stack Developer & AI Enthusiast",
-  subtitle: "Building high-performance web applications, AI tools, and scalable software systems.",
+  subtitle: "Building high-performance web applications and scalable software systems.",
   bio: "Passionate developer focused on building modern web applications, intelligent systems, and intuitive user experiences. Specialized in React, TypeScript, Node.js, and cutting-edge web technologies.",
   location: "New Delhi, India",
   email: "chirag.gupta@example.com",

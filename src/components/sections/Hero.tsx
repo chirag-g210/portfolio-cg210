@@ -33,7 +33,6 @@ export const Hero: React.FC = () => {
             <ScrollReveal variant="slideUp" delay={0.2}>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.12]">
                 Hi, I'm <span className="gradient-text-orange-purple">{PERSONAL_INFO.name}</span>.
-                <br className="hidden sm:inline" /> Building modern digital experiences.
               </h1>
             </ScrollReveal>
 
@@ -131,30 +130,30 @@ export const Hero: React.FC = () => {
                       </div>
                       <div className="pl-4">
                         <span className="text-cyan-400">name</span>:{' '}
-                        <span className="text-amber-300">"Developer"</span>,
+                        <span className="text-amber-300">"Chirag Gupta"</span>,
                       </div>
                       <div className="pl-4">
                         <span className="text-cyan-400">role</span>:{' '}
-                        <span className="text-amber-300">"Full Stack Developer"</span>,
+                        <span className="text-amber-300">"Aspiring Full Stack Developer"</span>,
                       </div>
                       <div className="pl-4">
                         <span className="text-cyan-400">skills</span>: [
                       </div>
                       <div className="pl-8">
-                        <span className="text-emerald-400">"React"</span>,
+                        <span className="text-emerald-400">"Java"</span>,
                       </div>
                       <div className="pl-8">
                         <span className="text-emerald-400">"JavaScript"</span>,
                       </div>
                       <div className="pl-8">
-                        <span className="text-emerald-400">"Java"</span>
+                        <span className="text-emerald-400">"React"</span>
                       </div>
                       <div className="pl-4">
                         ],
                       </div>
                       <div className="pl-4">
                         <span className="text-cyan-400">focus</span>:{' '}
-                        <span className="text-amber-300">"Building modern web experiences"</span>
+                        <span className="text-amber-300">"Building Scalable Web Applications"</span>
                       </div>
                       <div>&#125;;</div>
                     </div>
