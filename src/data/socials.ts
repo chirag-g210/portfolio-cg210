@@ -21,7 +21,7 @@ export const socials: SocialLink[] = [
   },
   {
     name: 'Email',
-    url: 'mailto:cg2102005@gmail.com',
+    url: 'https://mail.google.com/mail/?view=cm&fs=1&to=cg2102005@gmail.com',
     icon: 'Mail',
     color: 'hover:text-emerald-500'
   }
