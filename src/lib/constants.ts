@@ -8,10 +8,10 @@ export const PERSONAL_INFO = {
   status: "Available for new projects & opportunities",
   resumeUrl: "/resume.pdf",
   stats: [
-    { label: "Projects Completed", value: "4" },
-    { label: "Tech Stack Skills", value: "13+" },
-    { label: "Certifications", value: "3" },
-    { label: "Coding Profiles", value: "4" }
+    { label: "Projects Completed", value: "17" },
+    { label: "Tech Stack Skills", value: "15+" },
+    { label: "Certifications", value: "9" },
+    { label: "Coding Profiles", value: "2" }
   ]
 };
 

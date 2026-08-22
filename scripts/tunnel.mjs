@@ -1,19 +1,22 @@
-import { spawn } from 'node:child_process';
-import path from 'node:path';
-import os from 'node:os';
+import { startTunnel } from 'untun';
 
-const cloudflaredBin = path.join(os.homedir(), 'AppData', 'Local', 'Temp', 'node-untun', 'cloudflared.2026.7.2.exe');
+async function main() {
+  console.log('🚀 Starting Cloudflare Tunnel for http://localhost:5173 ...\n');
+  try {
+    const tunnel = await startTunnel({
+      url: 'http://localhost:5173',
+      acceptCloudflareNotice: true,
+    });
+    
+    const url = await tunnel.getURL();
+    console.log('====================================================');
+    console.log('🎉 Public Live URL (Accessible on any device/network):');
+    console.log(`👉 ${url}`);
+    console.log('====================================================\n');
+    console.log('Press Ctrl + C in this terminal to stop the tunnel.\n');
+  } catch (err) {
+    console.error('Failed to start tunnel:', err);
+  }
+}
 
-console.log('==================================================');
-console.log('STARTING CLOUDFLARE QUICK TUNNEL');
-console.log('Forwarding: http://localhost:5173');
-console.log('Press Ctrl + C to stop the tunnel.');
-console.log('==================================================\n');
-
-const child = spawn(cloudflaredBin, ['tunnel', '--url', 'http://localhost:5173'], {
-  stdio: 'inherit',
-});
-
-child.on('exit', (code) => {
-  process.exit(code || 0);
-});
+main();
