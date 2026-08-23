@@ -11,6 +11,7 @@
     "tunnel": "node scripts/tunnel.mjs"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "clsx": "^2.1.1",
     "lucide-react": "^1.29.0",
     "motion": "^12.43.0",
