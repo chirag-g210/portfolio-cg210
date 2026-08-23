@@ -10,7 +10,7 @@ export const PERSONAL_INFO = {
   stats: [
     { label: "Projects Completed", value: "17" },
     { label: "Tech Stack Skills", value: "15+" },
-    { label: "Certifications", value: "9" },
+    { label: "Certifications", value: "10" },
     { label: "Coding Profiles", value: "2" }
   ]
 };
