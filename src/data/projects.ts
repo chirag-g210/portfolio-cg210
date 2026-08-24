@@ -2,59 +2,89 @@ import { Project } from '../types/project';
 
 export const projects: Project[] = [
   {
-    id: 'nexus-ai',
-    title: 'Nexus AI Studio',
-    description: 'An AI-powered web canvas for real-time generative workflow management and prompt engineering.',
-    longDescription: 'Engineered a high-performance visual node canvas built with React, WebAssembly, and OpenAI APIs. Features streaming outputs, offline workspace caching, and team collaboration.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'OpenAI', 'Zustand', 'Vite'],
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop',
-    githubUrl: 'https://github.com/example/nexus-ai-studio',
-    liveUrl: 'https://example.com/nexus-ai',
-    featured: true,
+    id: 'sms',
+    title: 'Software Management System',
+    description:
+      'A responsive web application for managing student records, courses, grades, and academic information with local data persistence.',
+    longDescription:
+      'A lightweight and fully responsive Student Management System built with vanilla HTML, CSS, and JavaScript. It provides student CRUD operations, roll-number search, course tracking, grade analysis, dashboard statistics, theme switching, and LocalStorage-based data persistence.',
+    tags: [
+      'HTML5',
+      'CSS3',
+      'JavaScript',
+      'LocalStorage',
+      'Font Awesome'
+    ],
+    image: '/src/assets/sms.jpeg',
+    githubUrl: 'https://github.com/chirag-g210/student-management-system',
+    liveUrl: 'N/A',
+    featured: false,
+    category: 'Web Development',
+    metrics: 'Student CRUD & LocalStorage'
+  },
+  {
+    id: 'chirag-g210',
+    title: 'Portfolio-cg210',
+    description:
+      'Personal portfolio showcasing my projects, skills, experience, certifications, and achievements 🚀',
+    longDescription:
+      'A modern, responsive personal portfolio website built to showcase my software development projects, technical skills, certifications, and professional profile. It features dedicated sections for projects, skills, experience, certifications, resume, and contact, with a responsive UI and interactive animations designed for a smooth user experience.',
+    tags: [
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Vite',
+      'Motion',
+      'Responsive Design'
+    ],
+    image: '/src/assets/portfolio.png',
+    githubUrl: 'https://github.com/chirag-g210/portfolio-cg210',
+    liveUrl: 'N/A',
+    featured: false,
+    category: 'Web Development',
+    metrics: 'Responsive Personal Portfolio'
+  },
+  {
+    id: 'tracker',
+    title: 'Project Tree Tracker',
+    description:
+      '🌳 AI-powered project structure analyzer that turns screenshots into interactive, trackable project trees. 🤖',
+    longDescription:
+      'An AI-powered project workspace that analyzes project structure screenshots and converts them into an interactive file and folder tree. It supports structure verification, data tracking, file-level tasks, search and filtering, progress monitoring, folder analytics, and local project persistence.',
+    tags: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'Google Gemini',
+      'Node.js'
+    ],
+    image: '/src/assets/tracker.png',
+    githubUrl: 'https://github.com/chirag-g210/ProjectTree-Tracker',
+    liveUrl: 'N/A',
+    featured: false,
     category: 'AI & Data',
-    stars: 480,
-    metrics: 'Used by 12,000+ active creators'
+    metrics: 'AI-Powered Project Structure Analysis'
   },
   {
-    id: 'hyper-cloud',
-    title: 'HyperCloud Dashboard',
-    description: 'Real-time multi-cloud infrastructure monitoring platform with sub-millisecond metrics telemetry.',
-    longDescription: 'Architected a reactive analytics dashboard monitoring Kubernetes clusters across AWS and GCP. Features custom webGL chart rendering and automated alerting pipelines.',
-    tags: ['TypeScript', 'React', 'Tailwind CSS', 'GraphQL', 'Recharts', 'Docker'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop',
-    githubUrl: 'https://github.com/example/hyper-cloud-dashboard',
-    liveUrl: 'https://example.com/hyper-cloud',
-    featured: true,
-    category: 'Full Stack',
-    stars: 320,
-    metrics: 'Sub-50ms render latency'
-  },
-  {
-    id: 'pulse-ui',
-    title: 'Pulse UI Design System',
-    description: 'Accessible, accessible, dark-mode first component library optimized for enterprise applications.',
-    longDescription: 'Created a open-source headless UI library with 40+ accessible components, Radix primitives, and fluid Tailwind themes.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Storybook', 'Radix UI'],
-    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop',
-    githubUrl: 'https://github.com/example/pulse-ui-system',
-    liveUrl: 'https://example.com/pulse-ui',
-    featured: true,
-    category: 'Open Source',
-    stars: 890,
-    metrics: 'Over 50k monthly npm downloads'
-  },
-  {
-    id: 'synth-flow',
-    title: 'SynthFlow Audio Workstation',
-    description: 'WebAudio browser-based synthesizer and sequencer with real-time audio spatialization.',
-    longDescription: 'Browser DAW utilizing Web Audio API, Web Workers, and custom DSP effects for real-time electronic music composition.',
-    tags: ['TypeScript', 'WebAudio API', 'React', 'Tailwind CSS', 'Canvas'],
-    image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop',
-    githubUrl: 'https://github.com/example/synth-flow',
-    liveUrl: 'https://example.com/synth-flow',
+    id: 'a-clone',
+    title: 'Amazon Clone',
+    description:
+      '🛒 A responsive Amazon-inspired e-commerce website built using HTML and CSS, featuring a familiar shopping homepage layout.',
+    longDescription:
+      'A frontend Amazon-inspired e-commerce clone created to practice responsive web development and UI implementation. It recreates the core shopping homepage experience with an Amazon-style header, search and navigation area, hero banner, product category cards, product imagery, pricing sections, and footer layout.',
+    tags: [
+      'HTML5',
+      'CSS3',
+      'Responsive Design',
+      'E-Commerce UI'
+    ],
+    image: '/src/assets/a-clone.jpeg',
+    githubUrl:
+      'https://github.com/chirag-g210/amazon_clone',
+    liveUrl: '',
     featured: false,
     category: 'Frontend',
-    stars: 210,
-    metrics: 'Zero-latency audio synthesis'
+    metrics: 'Responsive E-Commerce UI'
   }
 ];

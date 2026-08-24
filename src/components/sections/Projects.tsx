@@ -7,7 +7,7 @@ import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import ScrollReveal from '../common/ScrollReveal';
 
-type CategoryFilter = 'All' | 'Full Stack' | 'Frontend' | 'AI & Data' | 'Open Source';
+type CategoryFilter = 'All' | 'Full Stack' | 'Frontend' | 'Web Development' | 'AI & Data' | 'Open Source';
 
 const CodeIcon = () => (
   <svg className="w-4 h-4 fill-current mr-1.5 inline" viewBox="0 0 24 24">
@@ -42,7 +42,7 @@ export const Projects: React.FC = () => {
         {/* Filter Pills */}
         <ScrollReveal variant="fade" delay={0.1}>
           <div className="flex flex-wrap justify-center gap-2.5 mb-14">
-            {(['All', 'Full Stack', 'Frontend', 'AI & Data', 'Open Source'] as CategoryFilter[]).map((cat) => (
+            {(['All', 'Full Stack', 'Frontend', 'Web Development', 'AI & Data', 'Open Source'] as CategoryFilter[]).map((cat) => (
               <button
                 key={cat}
                 onClick={() => handleFilterChange(cat)}

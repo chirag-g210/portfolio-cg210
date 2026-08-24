@@ -8,7 +8,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   featured: boolean;
-  category: 'Full Stack' | 'Frontend' | 'AI & Data' | 'Open Source';
+  category: 'Full Stack' | 'Frontend' | 'Web Development' | 'AI & Data' | 'Open Source';
   stars?: number;
   metrics?: string;
 }
