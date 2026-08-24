@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Cpu, Globe, Rocket, User } from 'lucide-react';
+import { Terminal, Globe, Cpu, Rocket, User } from 'lucide-react';
 import { PERSONAL_INFO } from '../../lib/constants';
 import SectionHeading from '../common/SectionHeading';
 import Card from '../ui/Card';
@@ -7,24 +7,24 @@ import ScrollReveal from '../common/ScrollReveal';
 
 const highlights = [
   {
-    icon: <Code className="w-6 h-6 text-orange-400" />,
-    title: 'Clean Architecture',
-    description: 'Writing maintainable, modular, and well-tested code bases.'
+    icon: <Terminal className="w-6 h-6 text-orange-400" />,
+    title: 'Problem Solving',
+    description: 'Building strong foundations in Data Structures & Algorithms and applying logical problem-solving approaches to programming challenges.'
   },
   {
     icon: <Globe className="w-6 h-6 text-purple-400" />,
-    title: 'Performance Rigor',
-    description: 'Achieving sub-100ms render speeds & 99+ Web Vitals.'
+    title: 'Web Development',
+    description: 'Building responsive and interactive web applications using HTML, CSS, JavaScript, React, and modern frontend tools.'
   },
   {
     icon: <Cpu className="w-6 h-6 text-amber-400" />,
-    title: 'Modern Stack',
-    description: 'Expertise in React, TypeScript, Next.js & Cloud tooling.'
+    title: 'Core CS',
+    description: 'Strong understanding of Object-Oriented Programming, DBMS, Operating Systems, and Computer Networks.'
   },
   {
     icon: <Rocket className="w-6 h-6 text-pink-400" />,
-    title: 'Product Mindset',
-    description: 'Bridging engineering rigor with intuitive user experiences.'
+    title: 'Continuous Learning',
+    description: 'Continuously exploring new technologies, building practical projects, and improving software development skills through hands-on experience.'
   }
 ];
 
@@ -58,7 +58,7 @@ export const About: React.FC = () => {
                 </p>
                 <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-6 text-xs font-semibold text-slate-400">
                   <div>📍 Location: <span className="text-slate-200">{PERSONAL_INFO.location}</span></div>
-                  <div>💼 Focus: <span className="text-orange-400">Full Stack & UI Engineering</span></div>
+                  <div>💼 Focus: <span className="text-orange-400">Software Development & Problem Solving</span></div>
                 </div>
               </Card>
             </ScrollReveal>
@@ -69,9 +69,11 @@ export const About: React.FC = () => {
             {highlights.map((item, index) => (
               <ScrollReveal key={item.title} variant="scale" delay={0.2 + index * 0.1}>
                 <Card className="p-6 h-full">
-                  <div className="mb-3.5">{item.icon}</div>
-                  <h4 className="font-bold text-sm text-white">{item.title}</h4>
-                  <p className="text-xs text-slate-400 mt-1.5 leading-relaxed">{item.description}</p>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="shrink-0">{item.icon}</div>
+                    <h4 className="font-bold text-sm text-white leading-snug">{item.title}</h4>
+                  </div>
+                  <p className="text-xs text-slate-400 leading-relaxed">{item.description}</p>
                 </Card>
               </ScrollReveal>
             ))}

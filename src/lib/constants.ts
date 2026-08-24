@@ -2,7 +2,7 @@ export const PERSONAL_INFO = {
   name: "Chirag Gupta",
   title: "Full Stack Developer & AI Enthusiast",
   subtitle: "Building high-performance web applications and scalable software systems.",
-  bio: "Passionate developer focused on building modern web applications, intelligent systems, and intuitive user experiences. Specialized in React, TypeScript, Node.js, and cutting-edge web technologies.",
+  bio: "Computer Science undergraduate passionate about software development and problem solving. I enjoy building practical applications, exploring modern web technologies, and strengthening my foundation in Data Structures & Algorithms and core computer science.",
   location: "Firozabad, Uttar Pradesh",
   email: "cg2102005@gmail.com",
   status: "Available for new projects & opportunities",
