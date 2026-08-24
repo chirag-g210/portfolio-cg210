@@ -15,7 +15,7 @@ export const projects: Project[] = [
       'LocalStorage',
       'Font Awesome'
     ],
-    image: '/src/assets/sms.jpeg',
+    image: '/src/assets/project/sms.jpeg',
     githubUrl: 'https://github.com/chirag-g210/student-management-system',
     liveUrl: 'N/A',
     featured: false,
@@ -37,7 +37,7 @@ export const projects: Project[] = [
       'Motion',
       'Responsive Design'
     ],
-    image: '/src/assets/portfolio.png',
+    image: '/src/assets/project/portfolio.png',
     githubUrl: 'https://github.com/chirag-g210/portfolio-cg210',
     liveUrl: 'N/A',
     featured: false,
@@ -59,7 +59,7 @@ export const projects: Project[] = [
       'Google Gemini',
       'Node.js'
     ],
-    image: '/src/assets/tracker.png',
+    image: '/src/assets/project/tracker.png',
     githubUrl: 'https://github.com/chirag-g210/ProjectTree-Tracker',
     liveUrl: 'N/A',
     featured: false,
@@ -79,12 +79,33 @@ export const projects: Project[] = [
       'Responsive Design',
       'E-Commerce UI'
     ],
-    image: '/src/assets/a-clone.jpeg',
+    image: '/src/assets/project/a-clone.jpeg',
     githubUrl:
       'https://github.com/chirag-g210/amazon_clone',
     liveUrl: '',
     featured: false,
     category: 'Frontend',
     metrics: 'Responsive E-Commerce UI'
+  },
+  {
+    id: 'n-clone',
+    title: 'Netflix Clone',
+    description:
+      '🎬 A responsive Netflix-inspired streaming website built using HTML and CSS. 🍿✨',
+    longDescription:
+      'A responsive Netflix-inspired website built with pure HTML and CSS that recreates the look and feel of a streaming platform. It includes a Netflix-style landing page, movie and show sections, responsive layouts, video content, download-style UI, kids profiles section, FAQ section, and a dark streaming-themed interface.',
+    tags: [
+      'HTML5',
+      'CSS3',
+      'Responsive Design',
+      'Video Content'
+    ],
+    image: '/src/assets/project/n-clone.jpeg',
+    githubUrl:
+      'https://github.com/chirag-g210/netflix-clone',
+    liveUrl: '',
+    featured: false,
+    category: 'Frontend',
+    metrics: 'Responsive Streaming UI'
   }
 ];
