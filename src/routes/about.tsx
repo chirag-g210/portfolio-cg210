@@ -4,7 +4,6 @@ import Skills from '../components/sections/Skills';
 import Experience from '../components/sections/Experience';
 import Certificates from '../components/sections/Certificates';
 import Achievements from '../components/sections/Achievements';
-import CodingProfiles from '../components/sections/CodingProfiles';
 
 export const AboutRoute: React.FC = () => {
   return (
@@ -14,7 +13,6 @@ export const AboutRoute: React.FC = () => {
       <Experience />
       <Certificates />
       <Achievements />
-      <CodingProfiles />
     </div>
   );
 };
