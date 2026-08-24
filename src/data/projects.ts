@@ -107,5 +107,27 @@ export const projects: Project[] = [
     featured: false,
     category: 'Frontend',
     metrics: 'Responsive Streaming UI'
+  },
+  {
+    id: 'CC',
+    title: 'Currency Converter',
+    description:
+      '💱 A simple currency converter for converting between different currencies easily. 🌍✨',
+    longDescription:
+      'A responsive and lightweight currency converter built with HTML, CSS, and vanilla JavaScript. It allows users to convert between different currencies using real-time exchange rates, supports currency swapping, displays country flags, validates the entered amount, and provides a simple responsive interface for desktop and mobile devices.',
+    tags: [
+      'HTML5',
+      'CSS3',
+      'JavaScript',
+      'Currency API',
+      'Responsive Design'
+    ],
+    image: '/src/assets/project/gen.png',
+    githubUrl:
+      'https://github.com/chirag-g210/currency-converter',
+    liveUrl: '',
+    featured: false,
+    category: 'Frontend',
+    metrics: 'Real-Time Currency Conversion'
   }
 ];
