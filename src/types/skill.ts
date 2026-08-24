@@ -1,10 +1,14 @@
-export type SkillCategory = 'Frontend' | 'Backend' | 'Cloud & DevOps' | 'Databases & Tools' | 'AI & Architecture';
+export type SkillCategory =
+  | 'Programming'
+  | 'Core CS'
+  | 'Frontend'
+  | 'Tools & Development'
+  | 'APIs & AI';
 
 export interface Skill {
   name: string;
   category: SkillCategory;
-  level: number; // 1-100
-  iconName: string;
-  description: string;
+  iconName?: string;
+  description?: string;
   highlight?: boolean;
 }
