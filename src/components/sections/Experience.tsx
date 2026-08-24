@@ -12,9 +12,8 @@ export const Experience: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal variant="slideUp">
           <SectionHeading
-            badge="Career History"
-            title="Professional Experience"
-            subtitle="A track record of engineering leadership & high-performance software execution."
+            title="Experience"
+            subtitle="My practical experience, learning journey, and growth as a software developer."
           />
         </ScrollReveal>
 
