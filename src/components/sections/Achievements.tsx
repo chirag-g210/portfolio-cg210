@@ -1,33 +1,51 @@
 import React from 'react';
-import { Trophy, GitPullRequest, Flame, Zap } from 'lucide-react';
+import { GitPullRequest, Award, Lightbulb, Zap, Sparkles } from 'lucide-react';
 import SectionHeading from '../common/SectionHeading';
 import Card from '../ui/Card';
 import ScrollReveal from '../common/ScrollReveal';
 
-const achievementsList = [
+interface AchievementItem {
+  icon: React.ReactNode;
+  title: string;
+  category: string;
+  description: string;
+}
+
+const achievementsList: AchievementItem[] = [
   {
-    icon: <Trophy className="w-6 h-6 text-orange-400" />,
-    title: 'Hackathon Champion',
-    subtitle: '1st Place out of 250+ Teams',
-    description: 'Built real-time collaborative AI canvas platform at Global Tech Innovators Hackathon.'
+    icon: <GitPullRequest className="w-6 h-6 text-orange-400" />,
+    title: 'GirlScript Summer of Code 2025',
+    category: 'Contributor',
+    description:
+      'Selected as a contributor for GirlScript Summer of Code 2025 and contributed to open-source projects as part of the program.'
   },
   {
-    icon: <GitPullRequest className="w-6 h-6 text-purple-400" />,
-    title: 'Top Open Source Contributor',
-    subtitle: '1,200+ Stars on GitHub',
-    description: 'Core maintainer of open source React component packages and developer tools.'
+    icon: <Award className="w-6 h-6 text-purple-400" />,
+    title: 'BuildWithIndia',
+    category: 'Certificate of Achievement',
+    description:
+      "Recognized with a Certificate of Achievement for contributing as a volunteer at BuildWithIndia and supporting the event's activities."
   },
   {
-    icon: <Flame className="w-6 h-6 text-amber-400" />,
-    title: '500+ Day Coding Streak',
-    subtitle: 'Consistency & Dedication',
-    description: 'Maintained continuous daily open source contributions and commits.'
+    icon: <Lightbulb className="w-6 h-6 text-amber-400" />,
+    title: 'Smart India Hackathon 2025',
+    category: 'Internal Hackathon Participant',
+    description:
+      'Participated in the Internal Hackathon for Smart India Hackathon 2025 as a member of Team HERITAURA at G.L. Bajaj Group of Institutions, Mathura.'
   },
   {
     icon: <Zap className="w-6 h-6 text-pink-400" />,
-    title: 'Performance Optimization',
-    subtitle: 'Apex Tech Annual Award',
-    description: 'Recognized for reducing cloud infrastructure expenditures by 35% through optimization.'
+    title: 'Hackfinity',
+    category: 'Participant',
+    description:
+      'Participated in Hackfinity, organized by G.L. Bajaj Group of Institutions, Mathura, and received a Certificate of Appreciation for participation.'
+  },
+  {
+    icon: <Sparkles className="w-6 h-6 text-cyan-400" />,
+    title: 'TechFront 2025',
+    category: 'Participant',
+    description:
+      'Participated in TechFront 2025 and engaged in the technical event activities.'
   }
 ];
 
@@ -39,27 +57,45 @@ export const Achievements: React.FC = () => {
           <SectionHeading
             badge="Recognitions"
             title="Key Achievements"
-            subtitle="Milestones, hackathon wins, and open source community impact."
+            subtitle="Recognitions, hackathons, open-source contributions, and learning milestones."
           />
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {achievementsList.map((item, index) => (
-            <ScrollReveal key={item.title} variant="scale" delay={0.1 * index}>
-              <Card className="p-6 h-full">
-                <div className="mb-4">{item.icon}</div>
-                <h3 className="font-bold text-base text-white mb-1">
-                  {item.title}
-                </h3>
-                <div className="text-xs font-semibold text-orange-400 mb-2.5">
-                  {item.subtitle}
-                </div>
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  {item.description}
-                </p>
-              </Card>
-            </ScrollReveal>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+          {achievementsList.map((item, index) => {
+            const gridClasses =
+              index === 3
+                ? 'lg:col-span-2 lg:col-start-2'
+                : index === 4
+                ? 'md:col-span-2 md:max-w-md md:w-full md:mx-auto lg:col-span-2 lg:col-start-4 lg:max-w-none'
+                : 'lg:col-span-2';
+
+            return (
+              <ScrollReveal
+                key={item.title}
+                variant="scale"
+                delay={0.08 * index}
+                className={`h-full ${gridClasses}`}
+              >
+                <Card className="p-6 h-full flex flex-col justify-between group">
+                  <div>
+                    <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 w-fit mb-4 group-hover:border-orange-500/30 group-hover:bg-orange-500/10 transition-all duration-300">
+                      {item.icon}
+                    </div>
+                    <h3 className="font-bold text-base text-white group-hover:text-orange-400 transition-colors mb-1">
+                      {item.title}
+                    </h3>
+                    <div className="text-xs font-semibold text-orange-400 mb-2.5">
+                      {item.category}
+                    </div>
+                    <p className="text-xs text-slate-400 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </Card>
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
     </section>
