@@ -2,43 +2,42 @@ import { Experience } from '../types/experience';
 
 export const experiences: Experience[] = [
   {
-    id: 'exp-1',
-    role: 'Lead Full Stack Engineer',
-    company: 'Apex Tech Labs',
-    location: 'Remote / New Delhi',
-    period: '2023 - Present',
-    type: 'Full-time',
-    description: [
-      'Led architectural redesign of core enterprise React & Node.js microservices, cutting p99 load times by 42%.',
-      'Mentored a team of 8 engineers and established clean component architecture and CI/CD best practices.',
-      'Spearheaded integration of LLM generative workflows into the core SaaS platform, driving +25% user retention.'
-    ],
-    skills: ['React', 'TypeScript', 'Node.js', 'Tailwind CSS', 'AWS', 'GraphQL']
+    id: 'edu-btech',
+    role: 'B.Tech — Computer Science & Engineering',
+    company: 'G.L. Bajaj Group of Institutions, Mathura',
+    period: '2023 – 2027',
+    status: 'Currently Pursuing',
+    result: 'Current SGPA: 7.2',
+    iconType: 'education',
+    current: true
   },
   {
-    id: 'exp-2',
-    role: 'Senior UI/UX & Frontend Engineer',
-    company: 'Vanguard Systems',
-    location: 'Bangalore, India',
-    period: '2021 - 2023',
-    type: 'Full-time',
+    id: 'exp-internship',
+    role: 'Software Development & AIML Intern',
+    company: 'Trianxyx',
+    period: '20 January 2026 – 21 July 2026',
+    status: 'Internship',
+    iconType: 'work',
     description: [
-      'Designed and built a unified glassmorphic design system used across 6 web applications.',
-      'Optimized Web Vitals score from 68 to 98 through dynamic bundle splitting and image pipeline automation.'
-    ],
-    skills: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Figma']
+      'Worked on AI/ML-based software solutions, scalable web applications, machine learning models, RESTful APIs, and database operations during the internship.'
+    ]
   },
   {
-    id: 'exp-3',
-    role: 'Frontend Developer',
-    company: 'Innovate Digital',
-    location: 'New Delhi, India',
-    period: '2019 - 2021',
-    type: 'Full-time',
-    description: [
-      'Developed responsive single-page applications and customer dashboards for fintech clients.',
-      'Collaborated closely with product designers to implement pixel-perfect micro-interactions.'
-    ],
-    skills: ['JavaScript', 'React', 'CSS3', 'REST APIs', 'Git']
+    id: 'edu-class-12',
+    role: 'Class XII',
+    company: 'John Milton Public School, Agra',
+    period: '2022 – 2023',
+    status: '71% Result',
+    result: '71% Result',
+    iconType: 'education'
+  },
+  {
+    id: 'edu-class-10',
+    role: 'Class X',
+    company: 'S.M.K English Medium School, Firozabad',
+    period: '2021 – 2022',
+    status: '86% Result',
+    result: '86% Result',
+    iconType: 'education'
   }
 ];
