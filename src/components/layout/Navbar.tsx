@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, CodeXml, Download, Send } from 'lucide-react';
+import { Menu, X, Download, Send } from 'lucide-react';
 import { PERSONAL_INFO } from '../../lib/constants';
 import { useScroll } from '../../hooks/useScroll';
 
@@ -55,9 +55,11 @@ export const Navbar: React.FC = memo(() => {
           className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F97316] focus-visible:ring-offset-2 focus-visible:ring-offset-[#02040A] rounded-xl"
           aria-label={`${PERSONAL_INFO.name} - Full Stack Developer`}
         >
-          <div className="p-2 rounded-xl bg-gradient-to-br from-[#F97316] via-[#FB923C] to-[#8B5CF6] text-white shadow-md shadow-[#F97316]/20 group-hover:scale-105 transition-transform duration-300">
-            <CodeXml className="w-5 h-5" />
-          </div>
+          <img
+            src="/favicon.png"
+            alt="Chirag Gupta"
+            className="w-9 h-9 rounded-full object-contain group-hover:scale-105 transition-transform duration-300"
+          />
           <div className="flex flex-col text-left">
             <span className="font-extrabold text-sm sm:text-base text-white tracking-tight group-hover:text-[#F97316] transition-colors leading-tight">
               {PERSONAL_INFO.name}

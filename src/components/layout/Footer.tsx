@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUp, Code2 } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { PERSONAL_INFO, NAV_LINKS } from '../../lib/constants';
 import SocialLinks from '../common/SocialLinks';
 
@@ -14,9 +14,11 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-10 border-b border-white/10">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-purple-600 text-white shadow-lg shadow-orange-500/20">
-              <Code2 className="w-5 h-5" />
-            </div>
+            <img
+              src="/favicon.png"
+              alt="Chirag Gupta"
+              className="w-10 h-10 rounded-full object-contain"
+            />
             <div>
               <h3 className="font-extrabold text-lg text-white">
                 {PERSONAL_INFO.name}
