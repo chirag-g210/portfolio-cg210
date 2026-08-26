@@ -15,7 +15,7 @@ export const projects: Project[] = [
       'LocalStorage',
       'Font Awesome'
     ],
-    image: '/src/assets/project/sms.jpeg',
+    image: '/project/sms.jpeg',
     githubUrl: 'https://github.com/chirag-g210/student-management-system',
     liveUrl: 'N/A',
     featured: false,
