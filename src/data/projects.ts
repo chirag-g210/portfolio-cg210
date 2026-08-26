@@ -37,7 +37,7 @@ export const projects: Project[] = [
       'Motion',
       'Responsive Design'
     ],
-    image: '/src/assets/project/portfolio.png',
+    image: '/project/portfolio.png',
     githubUrl: 'https://github.com/chirag-g210/portfolio-cg210',
     liveUrl: 'N/A',
     featured: false,
@@ -59,7 +59,7 @@ export const projects: Project[] = [
       'Google Gemini',
       'Node.js'
     ],
-    image: '/src/assets/project/tracker.png',
+    image: '/project/tracker.png',
     githubUrl: 'https://github.com/chirag-g210/ProjectTree-Tracker',
     liveUrl: 'N/A',
     featured: false,
@@ -79,7 +79,7 @@ export const projects: Project[] = [
       'Responsive Design',
       'E-Commerce UI'
     ],
-    image: '/src/assets/project/a-clone.jpeg',
+    image: '/project/a-clone.jpeg',
     githubUrl:
       'https://github.com/chirag-g210/amazon_clone',
     liveUrl: '',
@@ -100,7 +100,7 @@ export const projects: Project[] = [
       'Responsive Design',
       'Video Content'
     ],
-    image: '/src/assets/project/n-clone.jpeg',
+    image: '/project/n-clone.jpeg',
     githubUrl:
       'https://github.com/chirag-g210/netflix-clone',
     liveUrl: '',
@@ -122,7 +122,7 @@ export const projects: Project[] = [
       'Currency API',
       'Responsive Design'
     ],
-    image: '/src/assets/project/gen.png',
+    image: '/project/gen.png',
     githubUrl:
       'https://github.com/chirag-g210/currency-converter',
     liveUrl: '',
