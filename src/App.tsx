@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import PortfolioBackground from './components/common/PortfolioBackground';
 import MouseGlow from './components/common/MouseGlow';
 import Navbar from './components/layout/Navbar';
+import MobileBottomNav from './components/layout/MobileBottomNav';
 import Footer from './components/layout/Footer';
 
 const SectionFallback: React.FC = () => (
@@ -39,11 +40,11 @@ export const App: React.FC = () => {
       <PortfolioBackground />
       <MouseGlow />
 
-      {/* Shared Navbar */}
+      {/* Shared Navbar (Desktop & Mobile Top Header) */}
       <Navbar />
 
       {/* Main Page Content Outlet */}
-      <main className="relative z-10 flex-1 pt-24 pb-12 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="relative z-10 flex-1 pt-24 pb-16 md:pb-12 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Suspense fallback={<SectionFallback />}>
           <Outlet />
         </Suspense>
@@ -51,6 +52,9 @@ export const App: React.FC = () => {
 
       {/* Shared Footer */}
       <Footer />
+
+      {/* Mobile-Only Fixed Bottom Navigation Bar (<768px) */}
+      <MobileBottomNav />
     </div>
   );
 };
