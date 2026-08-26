@@ -17,7 +17,7 @@ export const projects: Project[] = [
     ],
     image: '/project/sms.jpeg',
     githubUrl: 'https://github.com/chirag-g210/student-management-system',
-    liveUrl: 'https://www.youtube.com/shorts/5xcSKbFwlqQ',
+    liveUrl: '',
     featured: false,
     category: 'Web Development',
     metrics: 'Student CRUD & LocalStorage'
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     ],
     image: '/project/tracker.png',
     githubUrl: 'https://github.com/chirag-g210/ProjectTree-Tracker',
-    liveUrl: 'N/A',
+    liveUrl: '',
     featured: false,
     category: 'AI & Data',
     metrics: 'AI-Powered Project Structure Analysis'
