@@ -39,7 +39,7 @@ export const projects: Project[] = [
     ],
     image: '/project/portfolio.png',
     githubUrl: 'https://github.com/chirag-g210/portfolio-cg210',
-    liveUrl: 'N/A',
+    liveUrl: 'https://portfolio-cg210.vercel.app/',
     featured: false,
     category: 'Web Development',
     metrics: 'Responsive Personal Portfolio'
