@@ -17,7 +17,7 @@ export const projects: Project[] = [
     ],
     image: '/project/sms.jpeg',
     githubUrl: 'https://github.com/chirag-g210/student-management-system',
-    liveUrl: 'N/A',
+    liveUrl: 'https://www.youtube.com/shorts/5xcSKbFwlqQ',
     featured: false,
     category: 'Web Development',
     metrics: 'Student CRUD & LocalStorage'
