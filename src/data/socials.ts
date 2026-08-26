@@ -14,10 +14,10 @@ export const socials: SocialLink[] = [
     color: 'hover:text-blue-600'
   },
   {
-    name: 'Twitter / X',
-    url: 'https://x.com/home',
-    icon: 'Twitter',
-    color: 'hover:text-sky-500'
+    name: 'Instagram',
+    url: 'https://www.instagram.com/chirag_g210/',
+    icon: 'Instagram',
+    color: 'hover:text-pink-500'
   },
   {
     name: 'Email',
