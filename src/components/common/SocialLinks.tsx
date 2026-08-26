@@ -37,7 +37,7 @@ export const SocialLinks: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={social.name}
-          className="p-3 rounded-xl glass-card-premium text-slate-400 hover:text-orange-400 hover:border-orange-500/30 hover:scale-110 transition-all duration-300"
+          className={`p-3 rounded-xl glass-card-premium text-slate-400 ${social.color || ''} hover:border-orange-500/30 hover:scale-110 transition-all duration-300`}
         >
           {iconMap[social.icon] || <Mail className="w-5 h-5" />}
         </a>
