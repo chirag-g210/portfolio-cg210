@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Mail, MapPin, Send, CheckCircle2, Copy, Check, AlertCircle, Loader2 } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle2, Copy, Check, AlertCircle, Loader2, Sparkles, MessageSquare } from 'lucide-react';
 import { PERSONAL_INFO } from '../../lib/constants';
 import SectionHeading from '../common/SectionHeading';
 import Card from '../ui/Card';
@@ -61,7 +61,7 @@ export const Contact: React.FC = () => {
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = 'Please enter your message.';
+      newErrors.message = 'Please share your project details or inquiry.';
     }
 
     setErrors(newErrors);
@@ -191,15 +191,32 @@ export const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal variant="slideUp">
           <SectionHeading
-            badge="Contact"
-            title="Let's Build Something Exceptional"
-            subtitle="Interested in starting a project or discussing technical opportunities? Get in touch."
+            badge="Get In Touch"
+            title="Have a Project in Mind?"
+            subtitle="Looking for a modern website, responsive frontend, or improvements to an existing website? Let's discuss how I can help."
           />
         </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-5xl mx-auto">
           {/* Info Side */}
           <div className="lg:col-span-5 flex flex-col gap-5">
+            {/* Availability info card */}
+            <ScrollReveal variant="slideRight" delay={0.05}>
+              <Card className="p-6 border-orange-500/20 bg-orange-500/[0.03]">
+                <div className="flex items-center gap-2.5 text-xs font-semibold text-orange-400 mb-2">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  </span>
+                  <span>Freelance Availability</span>
+                  <Sparkles className="w-3.5 h-3.5 ml-auto text-purple-400" />
+                </div>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  Open for new website development, responsive frontend work, website redesigns, and bug fixing projects.
+                </p>
+              </Card>
+            </ScrollReveal>
+
             <ScrollReveal variant="slideRight" delay={0.1}>
               <Card className="p-6 flex items-center justify-between">
                 <div className="flex items-center gap-4">
@@ -240,7 +257,7 @@ export const Contact: React.FC = () => {
                       {PERSONAL_INFO.location}
                     </div>
                     <div className="text-xs text-slate-400 mt-0.5 font-medium">
-                      IST / UTC+5:30
+                      IST / UTC+5:30 (Prompt response within 24 hours)
                     </div>
                   </div>
                 </div>
@@ -258,8 +275,8 @@ export const Contact: React.FC = () => {
                       <CheckCircle2 className="w-12 h-12 text-emerald-400 animate-bounce" />
                     </div>
                     <h3 className="text-2xl font-bold text-white">Message sent successfully!</h3>
-                    <p className="text-sm text-slate-400 mt-2 max-w-md">
-                      Thank you for reaching out. Your message has been delivered to my inbox and I will respond to you promptly.
+                    <p className="text-sm text-slate-300 mt-2 max-w-md">
+                      Thank you for reaching out about your project. Your inquiry has been sent to my inbox and I will respond to you promptly.
                     </p>
                     <div className="mt-6">
                       <Button
@@ -302,7 +319,7 @@ export const Contact: React.FC = () => {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="Alex Mercer"
+                        placeholder="Alex Morgan"
                         autoComplete="name"
                         aria-required="true"
                         aria-invalid={!!errors.name}
@@ -333,7 +350,7 @@ export const Contact: React.FC = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="alex@company.com"
+                        placeholder="alex@example.com"
                         autoComplete="email"
                         aria-required="true"
                         aria-invalid={!!errors.email}
@@ -355,7 +372,7 @@ export const Contact: React.FC = () => {
 
                     <div>
                       <label htmlFor="contact-message" className="block text-xs font-semibold text-slate-300 mb-2">
-                        Message <span className="text-orange-400">*</span>
+                        Project Details & Requirements <span className="text-orange-400">*</span>
                       </label>
                       <textarea
                         id="contact-message"
@@ -364,7 +381,7 @@ export const Contact: React.FC = () => {
                         rows={4}
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Share details about your upcoming project or inquiry..."
+                        placeholder="Tell me about your project, requirements, and timeline..."
                         aria-required="true"
                         aria-invalid={!!errors.message}
                         aria-describedby={errors.message ? 'message-error' : undefined}
@@ -397,7 +414,8 @@ export const Contact: React.FC = () => {
                         </>
                       ) : (
                         <>
-                          <span>Send Message</span>
+                          <MessageSquare className="w-4 h-4 mr-2" />
+                          <span>Send Project Inquiry</span>
                           <Send className="w-4 h-4 ml-2" />
                         </>
                       )}

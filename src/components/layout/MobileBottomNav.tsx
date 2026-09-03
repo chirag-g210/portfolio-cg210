@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Home, User, Briefcase, Send } from 'lucide-react';
+import { Home, Layers, Briefcase, User, Send } from 'lucide-react';
 
 interface NavItem {
   name: string;
@@ -11,8 +11,9 @@ interface NavItem {
 
 const MOBILE_NAV_ITEMS: NavItem[] = [
   { name: 'Home', href: '/', icon: Home },
-  { name: 'About', href: '/about', icon: User },
+  { name: 'Services', href: '/services', icon: Layers },
   { name: 'Projects', href: '/projects', icon: Briefcase },
+  { name: 'About', href: '/about', icon: User },
   { name: 'Contact', href: '/contact', icon: Send },
 ];
 
@@ -24,7 +25,7 @@ export const MobileBottomNav: React.FC = memo(() => {
       aria-label="Mobile Navigation"
       className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#02040A]/90 backdrop-blur-2xl border-t border-white/[0.08] shadow-[0_-8px_30px_rgba(0,0,0,0.8)] pb-[env(safe-area-inset-bottom,0px)]"
     >
-      <div className="max-w-md mx-auto px-2 py-1.5 flex items-center justify-around">
+      <div className="max-w-md mx-auto px-1.5 py-1 flex items-center justify-around">
         {MOBILE_NAV_ITEMS.map((item) => {
           const isActive =
             item.href === '/'
@@ -36,7 +37,7 @@ export const MobileBottomNav: React.FC = memo(() => {
             <Link
               key={item.name}
               to={item.href}
-              className={`relative flex-1 flex flex-col items-center justify-center py-1 px-1 rounded-xl transition-all duration-200 min-h-[48px] touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F97316] ${
+              className={`relative flex-1 flex flex-col items-center justify-center py-1 px-0.5 rounded-xl transition-all duration-200 min-h-[48px] touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F97316] ${
                 isActive
                   ? 'text-[#F97316]'
                   : 'text-slate-400 hover:text-slate-200 active:scale-95'
@@ -54,12 +55,12 @@ export const MobileBottomNav: React.FC = memo(() => {
 
               <div className="relative z-10 flex flex-col items-center justify-center">
                 <Icon
-                  className={`w-5 h-5 transition-transform duration-200 ${
+                  className={`w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200 ${
                     isActive ? 'scale-110 text-[#F97316]' : 'text-slate-400'
                   }`}
                 />
                 <span
-                  className={`text-[11px] mt-0.5 tracking-tight font-medium transition-colors ${
+                  className={`text-[10px] sm:text-[11px] mt-0.5 tracking-tight font-medium transition-colors truncate max-w-[56px] text-center ${
                     isActive ? 'font-semibold text-[#F97316]' : 'text-slate-400'
                   }`}
                 >

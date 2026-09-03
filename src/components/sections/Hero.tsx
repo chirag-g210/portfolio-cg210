@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { ArrowRight, Download, Sparkles, Terminal, Code } from 'lucide-react';
+import { ArrowRight, Download, Sparkles, Terminal, Code, MessageSquare, Briefcase } from 'lucide-react';
 import { PERSONAL_INFO } from '../../lib/constants';
-import AnimatedButton from '../common/AnimatedButton';
 import SocialLinks from '../common/SocialLinks';
 import ScrollReveal from '../common/ScrollReveal';
 
@@ -32,34 +32,50 @@ export const Hero: React.FC = () => {
             {/* Main Headline */}
             <ScrollReveal variant="slideUp" delay={0.2}>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.12]">
-                Hi, I'm <span className="gradient-text-orange-purple">{PERSONAL_INFO.name}</span>.
+                I Build <span className="gradient-text-orange-purple">Modern & Responsive</span> Websites
               </h1>
             </ScrollReveal>
 
             {/* Description */}
             <ScrollReveal variant="slideUp" delay={0.3}>
-              <p className="mt-6 text-base sm:text-lg text-slate-400 max-w-xl font-normal leading-relaxed">
+              <p className="mt-6 text-base sm:text-lg text-slate-300 max-w-xl font-normal leading-relaxed">
                 {PERSONAL_INFO.subtitle}
               </p>
             </ScrollReveal>
 
-            {/* CTA Area */}
+            {/* CTA Buttons */}
             <ScrollReveal variant="scale" delay={0.4}>
-              <div className="mt-8 flex flex-row items-center gap-4 flex-wrap sm:flex-nowrap">
+              <div className="mt-8 flex flex-wrap items-center gap-3.5 sm:gap-4">
+                {/* Primary CTA: View My Work */}
+                <Link
+                  to="/projects"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 text-white font-semibold text-sm shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 border border-orange-400/30 transition-all duration-300 hover:scale-105 active:scale-95"
+                >
+                  <Briefcase className="w-4 h-4 mr-2" />
+                  <span>View My Work</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+
+                {/* Secondary CTA: Start a Project */}
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl glass-card-premium border border-white/10 hover:border-orange-500/40 text-slate-200 hover:text-white font-semibold text-sm shadow-sm transition-all duration-300 hover:scale-105 active:scale-95"
+                >
+                  <MessageSquare className="w-4 h-4 mr-2 text-orange-400" />
+                  <span>Start a Project</span>
+                </Link>
+
+                {/* Resume Download CTA (Preserved) */}
                 <a
                   href={PERSONAL_INFO.resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 text-white font-semibold text-sm shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 border border-orange-400/30 transition-all duration-300 hover:scale-105 active:scale-95"
+                  className="inline-flex items-center justify-center px-5 py-3.5 rounded-xl border border-white/10 hover:border-white/20 text-slate-400 hover:text-slate-200 text-sm font-semibold transition-all duration-300 hover:bg-white/[0.03]"
+                  aria-label="Download Resume"
                 >
-                  <Download className="w-4 h-4 mr-2" />
-                  <span>Download Resume</span>
+                  <Download className="w-4 h-4 mr-2 text-slate-400" />
+                  <span>Resume</span>
                 </a>
-
-                <AnimatedButton href="/projects">
-                  <span>Projects</span>
-                  <ArrowRight className="w-4 h-4 ml-2 inline" />
-                </AnimatedButton>
               </div>
             </ScrollReveal>
 
@@ -96,7 +112,7 @@ export const Hero: React.FC = () => {
 
                   <div className="flex items-center gap-2 px-3 py-1 rounded-md bg-white/[0.05] border border-white/[0.08] text-[11px] font-mono text-slate-300">
                     <Code className="w-3.5 h-3.5 text-orange-400" />
-                    <span>Developer.tsx</span>
+                    <span>FrontendDev.tsx</span>
                   </div>
 
                   <Terminal className="w-4 h-4 text-slate-500" />
@@ -126,7 +142,7 @@ export const Hero: React.FC = () => {
                     <div className="space-y-1">
                       <div>
                         <span className="text-purple-400 font-semibold">const</span>{' '}
-                        <span className="text-orange-400 font-semibold">developer</span> = &#123;
+                        <span className="text-orange-400 font-semibold">freelancer</span> = &#123;
                       </div>
                       <div className="pl-4">
                         <span className="text-cyan-400">name</span>:{' '}
@@ -134,26 +150,30 @@ export const Hero: React.FC = () => {
                       </div>
                       <div className="pl-4">
                         <span className="text-cyan-400">role</span>:{' '}
-                        <span className="text-amber-300">"Aspiring Full Stack Developer"</span>,
+                        <span className="text-amber-300">"Frontend & Web Developer"</span>,
                       </div>
                       <div className="pl-4">
-                        <span className="text-cyan-400">skills</span>: [
+                        <span className="text-cyan-400">services</span>: [
                       </div>
                       <div className="pl-8">
-                        <span className="text-emerald-400">"Java"</span>,
+                        <span className="text-emerald-400">"Website Development"</span>,
                       </div>
                       <div className="pl-8">
-                        <span className="text-emerald-400">"JavaScript"</span>,
+                        <span className="text-emerald-400">"React Frontend UI"</span>,
                       </div>
                       <div className="pl-8">
-                        <span className="text-emerald-400">"React"</span>
+                        <span className="text-emerald-400">"Website Redesign"</span>
                       </div>
                       <div className="pl-4">
                         ],
                       </div>
                       <div className="pl-4">
                         <span className="text-cyan-400">focus</span>:{' '}
-                        <span className="text-amber-300">"Building Scalable Web Applications"</span>
+                        <span className="text-amber-300">"Modern & Responsive Websites"</span>,
+                      </div>
+                      <div className="pl-4">
+                        <span className="text-cyan-400">status</span>:{' '}
+                        <span className="text-emerald-400">"Available for Projects"</span>
                       </div>
                       <div>&#125;;</div>
                     </div>

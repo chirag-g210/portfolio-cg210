@@ -2,15 +2,8 @@ import React, { memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Download, Send } from 'lucide-react';
-import { PERSONAL_INFO } from '../../lib/constants';
+import { PERSONAL_INFO, NAV_LINKS } from '../../lib/constants';
 import { useScroll } from '../../hooks/useScroll';
-
-const NAV_ITEMS = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Contact', href: '/contact' },
-];
 
 export const Navbar: React.FC = memo(() => {
   const { scrolled } = useScroll(20);
@@ -33,7 +26,7 @@ export const Navbar: React.FC = memo(() => {
         <Link
           to="/"
           className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F97316] focus-visible:ring-offset-2 focus-visible:ring-offset-[#02040A] rounded-xl"
-          aria-label={`${PERSONAL_INFO.name} - Full Stack Developer`}
+          aria-label={`${PERSONAL_INFO.name} - ${PERSONAL_INFO.title}`}
         >
           <img
             src="/favicon.png"
@@ -45,7 +38,7 @@ export const Navbar: React.FC = memo(() => {
               {PERSONAL_INFO.name}
             </span>
             <span className="text-[10px] font-medium tracking-wider text-slate-400">
-              Full Stack Developer
+              {PERSONAL_INFO.title}
             </span>
           </div>
         </Link>
@@ -55,7 +48,7 @@ export const Navbar: React.FC = memo(() => {
           aria-label="Main Navigation"
           className="hidden md:flex items-center gap-1 lg:gap-1.5 px-4 py-1.5 rounded-full glass-card-premium border border-white/[0.08] shadow-lg shadow-black/40"
         >
-          {NAV_ITEMS.map((link) => {
+          {NAV_LINKS.map((link) => {
             const isActive = location.pathname === link.href;
             return (
               <Link
@@ -97,7 +90,7 @@ export const Navbar: React.FC = memo(() => {
             className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-[#F97316] to-[#EA580C] hover:from-[#FB923C] hover:to-[#F97316] shadow-md shadow-[#F97316]/20 border border-orange-400/30 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F97316]"
           >
             <Send className="w-3.5 h-3.5" />
-            <span>Contact</span>
+            <span>Hire Me</span>
           </Link>
         </div>
       </div>

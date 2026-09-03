@@ -1,5 +1,5 @@
 import React from 'react';
-import { Terminal, Globe, Cpu, Rocket, User } from 'lucide-react';
+import { Layout, Globe, Code2, HeartHandshake, User } from 'lucide-react';
 import { PERSONAL_INFO } from '../../lib/constants';
 import SectionHeading from '../common/SectionHeading';
 import Card from '../ui/Card';
@@ -7,24 +7,24 @@ import ScrollReveal from '../common/ScrollReveal';
 
 const highlights = [
   {
-    icon: <Terminal className="w-6 h-6 text-orange-400" />,
-    title: 'Problem Solving',
-    description: 'Building strong foundations in Data Structures & Algorithms and applying logical problem-solving approaches to programming challenges.'
+    icon: <Globe className="w-6 h-6 text-orange-400" />,
+    title: 'Modern Website Development',
+    description: 'Building modern, clean, and responsive websites with semantic HTML5, CSS3, Tailwind CSS, and JavaScript.'
   },
   {
-    icon: <Globe className="w-6 h-6 text-purple-400" />,
-    title: 'Web Development',
-    description: 'Building responsive and interactive web applications using HTML, CSS, JavaScript, React, and modern frontend tools.'
+    icon: <Code2 className="w-6 h-6 text-purple-400" />,
+    title: 'React Frontend Applications',
+    description: 'Creating interactive, component-driven user interfaces with React, state management, and seamless REST API integration.'
   },
   {
-    icon: <Cpu className="w-6 h-6 text-amber-400" />,
-    title: 'Core CS',
-    description: 'Strong understanding of Object-Oriented Programming, DBMS, Operating Systems, and Computer Networks.'
+    icon: <Layout className="w-6 h-6 text-amber-400" />,
+    title: 'Responsive & Accessible UI',
+    description: 'Ensuring consistent layouts and intuitive user experiences across desktop, tablet, and mobile devices.'
   },
   {
-    icon: <Rocket className="w-6 h-6 text-pink-400" />,
-    title: 'Continuous Learning',
-    description: 'Continuously exploring new technologies, building practical projects, and improving software development skills through hands-on experience.'
+    icon: <HeartHandshake className="w-6 h-6 text-pink-400" />,
+    title: 'Freelance Collaboration',
+    description: 'Dedicated to clear communication, meeting client specifications, and delivering polished, bug-free web solutions.'
   }
 ];
 
@@ -35,8 +35,8 @@ export const About: React.FC = () => {
         <ScrollReveal variant="slideUp">
           <SectionHeading
             badge="About Me"
-            title="Engineered for Innovation & Scale"
-            subtitle="Crafting software that balances visual aesthetics with robust technical foundations."
+            title="Frontend & Web Developer"
+            subtitle="Crafting modern, responsive, and user-focused web experiences with clean code and thoughtful design."
           />
         </ScrollReveal>
 
@@ -49,16 +49,22 @@ export const About: React.FC = () => {
                   <div className="p-3 rounded-xl bg-gradient-to-r from-orange-500 to-purple-600 text-white shadow-lg shadow-orange-500/20">
                     <User className="w-5 h-5" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">
-                    Hello! I'm {PERSONAL_INFO.name}
-                  </h3>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">
+                      Hello! I'm {PERSONAL_INFO.name}
+                    </h3>
+                    <p className="text-xs font-semibold text-orange-400 mt-0.5">
+                      {PERSONAL_INFO.title}
+                    </p>
+                  </div>
                 </div>
                 <p className="text-slate-300 leading-relaxed text-base">
                   {PERSONAL_INFO.bio}
                 </p>
                 <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-6 text-xs font-semibold text-slate-400">
                   <div>📍 Location: <span className="text-slate-200">{PERSONAL_INFO.location}</span></div>
-                  <div>💼 Focus: <span className="text-orange-400">Software Development & Problem Solving</span></div>
+                  <div>💼 Focus: <span className="text-orange-400">Modern Websites & Frontend Development</span></div>
+                  <div>🚀 Availability: <span className="text-emerald-400">Freelance Projects</span></div>
                 </div>
               </Card>
             </ScrollReveal>

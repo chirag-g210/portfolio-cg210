@@ -11,4 +11,6 @@ export interface Project {
   category: 'Full Stack' | 'Frontend' | 'Web Development' | 'AI & Data' | 'Open Source';
   stars?: number;
   metrics?: string;
+  whatIBuilt?: string[];
 }
+

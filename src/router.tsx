@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import App from './App';
 import HomeRoute from './routes/index';
+import ServicesRoute from './routes/services';
 import AboutRoute from './routes/about';
 import ProjectsRoute from './routes/projects';
 import ContactRoute from './routes/contact';
@@ -12,6 +13,7 @@ export const Router: React.FC = () => {
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<HomeRoute />} />
+          <Route path="services" element={<ServicesRoute />} />
           <Route path="about" element={<AboutRoute />} />
           <Route path="projects" element={<ProjectsRoute />} />
           <Route path="contact" element={<ContactRoute />} />
